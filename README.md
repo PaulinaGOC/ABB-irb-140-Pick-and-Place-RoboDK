@@ -1,5 +1,8 @@
 # Tutorial: Rutina de Pick and Place 
 En este proyecto se realizó la simulación de una rutina de Pick and Place usando un brazo robótico modelo **ABB irb 140** con un gripper tipo **RobotiQ 2F-85** en la plataforma de simulación **RoboDK**. El objetivo de este proyecto es desarrollar una rutina automatizada que sea capaz de mover los objetos, que se realice la rutina y que estos regresen a su posición inicial.
+
+![Robot ABB irb 140](media/ABB_IRB_140.png)
+
 # 📋 Requisitos previos 
 Para llevar a cabo este proyecto, se recomienda:
 1. Tener instalado el programa **RoboDK** el cual es un entorno de simulación y programación de robots industriales y te permite modelar estaciones de trabajo, programar trayectorias, entre otras cosas
@@ -48,9 +51,10 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 3.   Luego, le das click al botón: *Add New Target* (el cual es una diana con una flecha) y al darle click derecho a este nuevo target, le puedes cambiar de nombre. 
     a) Como recomendación, pon la posicón y el objeto que estés manipulando para evitar posteriores confusiones.
 4. Para el caso de home, le vuelves a dar click derecho y en el menú desplegable, le das click en *Teach current position*
-5. Para los demás puntos de paso, se deben de crear los nuevos targets (*Add New Target* y renombrarlo). Para moverlos a otra posición, se debe de seleccionar al robot para que se manualmente se muevan en "x", "y" y "z" y en caso de ser necesario, también se configuran las rotaciones en estos 3 ejes. Una vez que la posición este hecha, se vuelve a dar click derecho y se oprime el *Teach Current Position* para poder proseguir.
-6. Estos mismos pasos se deben de repetir para hacer cada punto de paso de toda la rutina.
-
+5.  Para los demás puntos de paso, se deben de crear los nuevos targets (*Add New Target* y renombrarlo). Para moverlos a otra posición, se debe de seleccionar al robot para que se manualmente se muevan en "x", "y" y "z" y en caso de ser necesario, también se configuran las rotaciones en estos 3 ejes. Una vez que la posición este hecha, se vuelve a dar click derecho y se oprime el *Teach Current Position* para poder proseguir.
+6.   Estos mismos pasos se deben de repetir para hacer cada punto de paso de toda la rutina.
+   
+![Robot ABB irb 140](media/Posicion_y_menu.png)
 **⌨ Programas de Attach & Detach**
 1. Para realizar estos programas, primero se deben de crear los programas, para ello se da click en el botón *Add Program*  y se debe de renombrar haciendo click derecho -> Rename
 2. Luego, debes de agregar una instrucción, para hacerlo, le das click al programa creado y luego en el menú de arriba, en la opción Program->Simulation Event Instruction
@@ -139,7 +143,8 @@ NOTA: Los calores de tranlación se obtuvieron a partir de dónde se configuraro
 13. Una vez terminado, le das click en *Save* o *Ctrl + S*
 14. Para ejecutarlo, das click derecho en el programa de Pyhton, y en el menú desplegable, le das click en <ins>*Run Python Script*</ins>, con esto, el programa corre
 
-# ▶️ Video:
+# ▶️ Evidencia (Imagen y Video):
+![Robot ABB irb 140](media/Workspace.png)
 https://www.youtube.com/watch?v=yUIlx9siYtE
 
 # 🏗️ Conclusiones y Poaibles Mejoras
