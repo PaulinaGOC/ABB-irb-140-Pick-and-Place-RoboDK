@@ -7,9 +7,9 @@ En este proyecto se realizó la simulación de una rutina de Pick and Place usan
 Para llevar a cabo este proyecto, se recomienda:
 1. Tener instalado el programa **RoboDK** el cual es un entorno de simulación y programación de robots industriales y te permite modelar estaciones de trabajo, programar trayectorias, entre otras cosas
 2. Tener conocimiento básico sobre la programación en Python como lo es:
-  a. Importar librerías
-  b. Uso básico de objetos
-  c. Sintaxis de condiciones
+- Importar librerías
+- Uso básico de objetos
+- Sintaxis de condiciones
 
 # 📓  Introducción 
 Hoy en día, los sistemas robóticos tienen un rol esencial para poder automatizar tareas que son repetitivas, con el propósito de mejorar los sistemas en términos de eficiencia y minimizar los errores humanos. Una de las tareas consideradas de este tipo es la de *Pick-and-Place*, la cual consiste en que un brazo robótico tome una pieza, con una garra o pinza robótica, parte o caja y la mueva a otra posición definida. (Universal Robots, 2025). Es por ello que el *Pick-and-Place* es sumamente usado en líneas de producción o ensamblaje para automatizar estos procesos. Para lograrlo, este proyecto usa el robot **ABB irb 140** y simula lo siguiente:
