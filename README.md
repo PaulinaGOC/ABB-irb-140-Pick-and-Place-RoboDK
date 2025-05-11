@@ -1,5 +1,5 @@
-# {Tutorial: Rutina de Pick and Place utilizando un brazo robótico ABB irb140 y Pyhton}
-
+# Tutorial: Rutina de Pick and Place
+En este proyecto se realizó la simulación de una rutina de Pick and Place usando un brazo robótico modelo # ABB irb 140 # con un gripper tipo RobotiQ
 # Requisitos previos
 
 # Introducción
