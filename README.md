@@ -143,7 +143,7 @@ NOTA: Los calores de tranlación se obtuvieron a partir de dónde se configuraro
 13. Una vez terminado, le das click en *Save* o *Ctrl + S*
 14. Para ejecutarlo, das click derecho en el programa de Pyhton, y en el menú desplegable, le das click en <ins>*Run Python Script*</ins>, con esto, el programa corre
 
-# ▶️ Evidencia (Imagen y Video):
+# ▶️ Evidencia:
 ![Robot ABB irb 140](media/Workspace.png)
 https://www.youtube.com/watch?v=yUIlx9siYtE
 
