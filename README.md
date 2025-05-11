@@ -57,7 +57,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 3. Una vez agregado, le das doble click a *Simulation Event Instruction* y se abre una pantalla, ahí, se debe de seleccionar la opción de Attach y el TCP que estés utilizando, esto hará que cuando el gripper se acerque al objeto, este se van a juntar, luego, le das click en guardar.
 4. Se va a crear otro programa utilizando los pasos 1-3 de esta sección, sólamente que esta vez, en vez de seleccionar la opción de Attach, se debe de configurar como detach para que el objeto lo suelte el TCP, nuevamente, una vez configurado esto, se guarda el programa
 
-**▶️ Programa de Python**
+**💻 Programa de Python**
 1. En el árbol de trabajo, le das click a tu estación y agregas un script de Python, para ello le das click en Add->Program(Pyhton)
 2. Una vez generado, le das click derecho al programa y en un menú desplegable, darle click en *Edit Python Program* así, podrás abrir este script y editarlo
 3. Primero, se deben de agregar las librerías robolik y robomath. La primera es para tener comunicación con RoboDK y los objetos y programas que se agregaron, el segundo es para realizar las transformaciones de coordenadas y hacer las rotaciones que se configuraron en los puntos de paso:
@@ -137,7 +137,10 @@ NOTA: Los calores de tranlación se obtuvieron a partir de dónde se configuraro
 **NOTA**:Este es el script general, en caso de querer agregar más objetos a manipular, se puede utilizar esto como base
 
 13. Una vez terminado, le das click en *Save* o *Ctrl + S*
-14. Para ejecutarlo, das click derecho en el programa de Pyhton, y en el menú desplegable, le das click en <ins>*Run Python Script*</ins>, con esto, el programa corre 
+14. Para ejecutarlo, das click derecho en el programa de Pyhton, y en el menú desplegable, le das click en <ins>*Run Python Script*</ins>, con esto, el programa corre
+
+# ▶️ Video:
+https://www.youtube.com/watch?v=yUIlx9siYtE
 
 # 🏗️ Conclusiones y Poaibles Mejoras
 Este proyecto permitó comprender la función y cómo se puede automatizar una rutina básica de Pick-and-Place con un brazo robótico industrial en uns simulación en RoboDK a tarvés de un programa en Python. Es por ello que como conlcusiones tenemos:
