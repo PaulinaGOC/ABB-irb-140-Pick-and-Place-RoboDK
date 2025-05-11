@@ -1,5 +1,12 @@
-# 🦾 Tutorial: Rutina de Pick and Place 
+# Tutorial: Rutina de Pick and Place 
 En este proyecto se realizó la simulación de una rutina de Pick and Place usando un brazo robótico modelo **ABB irb 140** con un gripper tipo **RobotiQ 2F-85** en la plataforma de simulación **RoboDK**. El objetivo de este proyecto es desarrollar una rutina automatizada que sea capaz de mover los objetos, que se realice la rutina y que estos regresen a su posición inicial.
+# 📋 Requisitos previos
+Para llevar a cabo este proyecto, se recomienda:
+1. Tener instalado el programa **RoboDK** el cual es un entorno de simulación y programación de robots industriales y te permite modelar estaciones de trabajo, programar trayectorias, entre otras cosas
+2. Tener conocimiento básico sobre la programación en Python como lo es:
+  a. Importar librerías
+  b. Uso básico de objetos
+  c. Sintaxis de condiciones
 
 # 📓  Introducción 
 Hoy en día, los sistemas robóticos tienen un rol esencial para poder automatizar tareas que son repetitivas, con el propósito de mejorar los sistemas en términos de eficiencia y minimizar los errores humanos. Una de las tareas consideradas de este tipo es la de *Pick-and-Place*, la cual consiste en que un brazo robótico tome una pieza, con una garra o pinza robótica, parte o caja y la mueva a otra posición definida. (Universal Robots, 2025). Es por ello que el *Pick-and-Place* es sumamente usado en líneas de producción o ensamblaje para automatizar estos procesos. Para lograrlo, este proyecto usa el robot **ABB irb 140** y simula lo siguiente:
@@ -17,15 +24,7 @@ Hoy en día, los sistemas robóticos tienen un rol esencial para poder automatiz
 
 NOTA: Además, se usan dos programas auxiliares: *Attach* & *Detach* que permiten hacer la simulación del gripper al tomar y soltar un objeto
 
-#  👉 Requisitos previos
-Para llevar a cabo este proyecto, se recomienda:
-1. Tener instalado el programa **RoboDK** el cual es un entorno de simulación y programación de robots industriales y te permite modelar estaciones de trabajo, programar trayectorias, entre otras cosas
-2. Tener conocimiento básico sobre la programación en Python como lo es:
-  a. Importar librerías
-  b. Uso básico de objetos
-  c. Sintaxis de condiciones
-
-# 💻 Instalación necesaria:
+# 💾 Instalación necesaria:
 El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.com/download
 ***Consideraciones:*** 
 - Para sistemas operativos: Windows10, Linux y macOS
@@ -33,7 +32,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 - Almacenamiento aproximado de 500 MB
 - **Opcional**: GPU dedicada para un renderizado más fluido
 
-# ⌨️ Instrucciones 
+# 🛠️ Instrucciones 
 **🤖 Configuración del entorno de trabajo:**
 1. Primero, se debe de crear y organización del espacio de trabajo en RoboDk, para ello, se debe de agregar el robot en <ins> Archivo -> Abrir </ins> y seleccionas de la carpeta el archivo *ABB-IRB-140-6-0-8.robot*.
 2. Después, se debe de agregar el gripper, para ello, vas a <ins> Archivo -> Abrir </ins> y agregas el archivo *RobotiQ-2F-85-Gripper-Closed.tool* y luego este se debe de poner como el TCP del robot. Para lograrglo, vas al árbol de trabajo y con click derecho, seleccionas el gripper, se abre el menú y le das click en *Attach to* y seleccionas el últomo eslabón del robot. Así, el gripper ya está configurado como el TCP del robot ABB.
@@ -52,7 +51,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 5. Para los demás puntos de paso, se deben de crear los nuevos targets (*Add New Target* y renombrarlo). Para moverlos a otra posición, se debe de seleccionar al robot para que se manualmente se muevan en "x", "y" y "z" y en caso de ser necesario, también se configuran las rotaciones en estos 3 ejes. Una vez que la posición este hecha, se vuelve a dar click derecho y se oprime el *Teach Current Position* para poder proseguir.
 6. Estos mismos pasos se deben de repetir para hacer cada punto de paso de toda la rutina.
 
-**📋 Programas de Attach & Detach**
+**⌨ Programas de Attach & Detach**
 1. Para realizar estos programas, primero se deben de crear los programas, para ello se da click en el botón *Add Program*  y se debe de renombrar haciendo click derecho -> Rename
 2. Luego, debes de agregar una instrucción, para hacerlo, le das click al programa creado y luego en el menú de arriba, en la opción Program->Simulation Event Instruction
 3. Una vez agregado, le das doble click a *Simulation Event Instruction* y se abre una pantalla, ahí, se debe de seleccionar la opción de Attach y el TCP que estés utilizando, esto hará que cuando el gripper se acerque al objeto, este se van a juntar, luego, le das click en guardar.
@@ -140,7 +139,7 @@ NOTA: Los calores de tranlación se obtuvieron a partir de dónde se configuraro
 13. Una vez terminado, le das click en *Save* o *Ctrl + S*
 14. Para ejecutarlo, das click derecho en el programa de Pyhton, y en el menú desplegable, le das click en <ins>*Run Python Script*</ins>, con esto, el programa corre 
 
-# 🏗️ Conclusión y Mejoras
+# 🏗️ Conclusiones y Poaibles Mejoras
 Este proyecto permitó comprender la función y cómo se puede automatizar una rutina básica de Pick-and-Place con un brazo robótico industrial en uns simulación en RoboDK a tarvés de un programa en Python. Es por ello que como conlcusiones tenemos:
 - Se puede ver la facilidad de la automatización al implementar este programa, ya que permitió la creación y modificación de los procesos simulados.
 - Se comprendió el entorno de RoboDK para poder escalar a proyectos más complejos que involucren sensores o múltiples robots operando juntos.
@@ -167,6 +166,7 @@ Repositorio sobre la documentación de RoboDK- Python: https://github.com/RoboDK
 
 # 📞 Contacto
 Para preguntas o sugerencias: 
+
 - Asesor encargado de la página: Dr. César Martínez Torres
     - 📥Correo electrónico:
       cesar.martinez@udlap.mx
