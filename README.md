@@ -1,6 +1,6 @@
 # Tutorial: Rutina de Pick and Place 
 En este proyecto se realizó la simulación de una rutina de Pick and Place usando un brazo robótico modelo **ABB irb 140** con un gripper tipo **RobotiQ 2F-85** en la plataforma de simulación **RoboDK**. El objetivo de este proyecto es desarrollar una rutina automatizada que sea capaz de mover los objetos, que se realice la rutina y que estos regresen a su posición inicial.
-# 📋 Requisitos previos
+# 📋 Requisitos previos 
 Para llevar a cabo este proyecto, se recomienda:
 1. Tener instalado el programa **RoboDK** el cual es un entorno de simulación y programación de robots industriales y te permite modelar estaciones de trabajo, programar trayectorias, entre otras cosas
 2. Tener conocimiento básico sobre la programación en Python como lo es:
