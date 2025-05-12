@@ -66,30 +66,31 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 2. Una vez generado, le das click derecho al programa y en un menú desplegable, darle click en *Edit Python Program* así, podrás abrir este script y editarlo
 3. Primero, se deben de agregar las librerías robolik y robomath. La primera es para tener comunicación con RoboDK y los objetos y programas que se agregaron, el segundo es para realizar las transformaciones de coordenadas y hacer las rotaciones que se configuraron en los puntos de paso:
    
-    from robodk import robolink, robomath      
+   ``` python
+   from robodk import robolink, robomath      
  
 4. Luego se hace la conexión con RoboDK que permite conectar con todos los objetos:
 
-   
+   ``` python   
    RDK = robolink.Robolink()
 
    
 5. Luego, se obtiene el robot importado
 
-
+   ``` python
     robot = RDK.Item('ABB IRB 140', robolink.ITEM_TYPE_ROBOT)
 
 
 6. Y también se define el gripper
 
-
+   ``` python
     tool = RDK.Item('Gripper Closed', robolink.ITEM_TYPE_TOOL)
     robot.setPoseTool(tool)
 
 
 7. Luego, se debe de obtener los objetos a manipular (en este caso son los cubos)
 
-
+   ``` python
     cubeblue = RDK.Item('Cube Blue', robolink.ITEM_TYPE_OBJECT)
     cubered = RDK.Item ('Cube Red', robolink.ITEM_TYPE_OBJECT)
     cubegreen = RDK.Item ('Cube Green', robolink.ITEM_TYPE_OBJECT)
@@ -97,7 +98,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 
 8. Después, se deben de definir las posiciones iniciales de los cubos, esto con el objetivo de que al finalizar la rutina, estos regresen ahí:
 
-
+   ``` python
     cubeblue_home_pose = robomath.transl(450, 140, 0) * robomath.rotx(0) * robomath.roty(0) * robomath.rotz(0)
     cubered_home_pose = robomath.transl(450, 250, 0) * robomath.rotx(0) * robomath.roty(0) * robomath.rotz(0)
     cubegreen_home_pose = robomath.transl(450, 340, 0) * robomath.rotx(0) * robomath.roty(0) * robomath.rotz(0)
@@ -106,20 +107,19 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 
 9. Luego se deben de obtener los puntos de paso y los programas de Attach/Detach
 
-
+   ``` python
       homecubeblue = RDK.Item('Home', robolink.ITEM_TYPE_TARGET)
       prepickcubeblue = RDK.Item('Prepick_CubeBlue', robolink.ITEM_TYPE_TARGET)
       pickcubeblue = RDK.Item('Pick_CubeBlue', robolink.ITEM_TYPE_TARGET)
       preplacecubeblue = RDK.Item('Preplace_CubeBlue', robolink.ITEM_TYPE_TARGET)
       placecubeblue = RDK.Item('Place_CubeBlue', robolink.ITEM_TYPE_TARGET)
-   
       prog_attachcubeblue = RDK.Item('Attach Cube Blue', robolink.ITEM_TYPE_PROGRAM)
       prog_detachcubeblue = RDK.Item('Detach Cube Blue', robolink.ITEM_TYPE_PROGRAM)
 
 
 10. Después se deben de definir el tipo de movimiento (Ya sea MoveJ o Move L) dependiendo de lo que se requiera y se selecciona el target a realizar:
 
-
+   ``` python
     robot.MoveJ(homecubeblue)
     robot.MoveJ(prepickcubeblue)
     robot.MoveL(pickcubeblue)
@@ -129,19 +129,19 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
     robot.MoveL(placecubeblue)
     prog_detachcubeblue.RunProgram()
     robot.MoveJ(homecubeblue)
-
-    La rutina a seguir es: **Home -> Prepick -> Pick -> Prepick -> Preplace -> Place -> Home**
+ ```
+**NOTA** La rutina a seguir es: **Home -> Prepick -> Pick -> Prepick -> Preplace -> Place -> Home**
     
-12. Finalmente, se regresa el cubo a su posición original
+11. Finalmente, se regresa el cubo a su posición original
 
-
+   ``` python
     cubeblue.setPoseAbs(cubeblue_home_pose)
-
+ ```
 
 **NOTA**:Este es el script general, en caso de querer agregar más objetos a manipular, se puede utilizar esto como base
 
-13. Una vez terminado, le das click en *Save* o *Ctrl + S*
-14. Para ejecutarlo, das click derecho en el programa de Pyhton, y en el menú desplegable, le das click en <ins>*Run Python Script*</ins>, con esto, el programa corre
+12. Una vez terminado, le das click en *Save* o *Ctrl + S*
+13. Para ejecutarlo, das click derecho en el programa de Pyhton, y en el menú desplegable, le das click en <ins>*Run Python Script*</ins>, con esto, el programa corre
 
 # ▶️ Evidencia:
 ![Robot ABB irb 140](media/Workspace.png)
