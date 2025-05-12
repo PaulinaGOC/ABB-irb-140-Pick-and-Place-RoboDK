@@ -25,7 +25,7 @@ Hoy en día, los sistemas robóticos tienen un rol esencial para poder automatiz
   - **MoveJ**: Es un movimiento articular empleado para trasladarse de un punto a otro de manera libre (como para moverse de home a pre-pick o de pick a pre-place)
   - **MoveL**: Es un movimiento lineal que se utiliza para moverse en línea recta (como para recojer o soltar un objeto)
 
-NOTA: Además, se usan dos programas auxiliares: *Attach* & *Detach* que permiten hacer la simulación del gripper al tomar y soltar un objeto
+**NOTA:** Además, se usan dos programas auxiliares: *Attach* & *Detach* que permiten hacer la simulación del gripper al tomar y soltar un objeto
 
 # 💾 Instalación necesaria:
 El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.com/download
@@ -40,7 +40,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 1. Primero, se debe de crear y organización del espacio de trabajo en RoboDk, para ello, se debe de agregar el robot en <ins> Archivo -> Abrir </ins> y seleccionas de la carpeta el archivo *ABB-IRB-140-6-0-8.robot*.
 2. Después, se debe de agregar el gripper, para ello, vas a <ins> Archivo -> Abrir </ins> y agregas el archivo *RobotiQ-2F-85-Gripper-Closed.tool* y luego este se debe de poner como el TCP del robot. Para lograrglo, vas al árbol de trabajo y con click derecho, seleccionas el gripper, se abre el menú y le das click en *Attach to* y seleccionas el últomo eslabón del robot. Así, el gripper ya está configurado como el TCP del robot ABB.
 3. Una vez logrado lo anterior, se deben de agregar los otros elementos de la estación del trabajo, para ello, se debe de agregar un eje. Se debe de seleccionar el espacio de trabajo (en RoboDK, ver el árbol de trabajo y darle click a la carpeta que aparece al principio), una vez configurado esto, se selecciona este eje y le das click en <ins> Archivo -> Abrir </ins> para agregar la mesa y la caja, los cuales son fijos. Al darle doble click a cada uno de los objetos, los puedes mover y rotar en "x", "y" y "z" las unidades de medida que necesites. En este caso, la mesa se encuentra abajo del robot y la caja se encuentra al costado izquierdo.
-4. Finalmente, se agregan de la misma manera que la mesa y la caja, los cubos que quieras simular, en este programa, se agregaron 3 cubos y se posicionaron a un costado derecho del robot y con una distancia en y para que este los pudiera agarrar. (OPCIONAL: Se pueden cambiar de color al apretar el botón de *more configurations* cuando trasladas y rotas el cubo)
+4. Finalmente, se agregan de la misma manera que la mesa y la caja, los cubos que quieras simular, en este programa, se agregaron 3 cubos y se posicionaron a un costado derecho del robot y con una distancia en y para que este los pudiera agarrar. (**OPCIONAL:** Se pueden cambiar de color al apretar el botón de *more configurations* cuando trasladas y rotas el cubo)
 5. En la siguiente imagen, se puede ver cómo debe de estar configurado:
 
 **NOTA:** Todos los objetos mencionados para descargar se encuentran en este repositorio: src-> Descargables RoboDk
@@ -49,7 +49,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 1. Una vez que toda la estación esté lista, se deben de configurar los puntos de paso para cada uno de los objetos. En este caso que se emplearon 3 cubos, se configuraron 13 puntos de paso (1 punto de Home, 3 puntos de Prepick, 3 puntos de Pick, 3 puntos de Preplace y 3 puntos de Place)
 2.   Para ello, primero le das clik al robot cargado dentro del árbol
 3.   Luego, le das click al botón: *Add New Target* (el cual es una diana con una flecha) y al darle click derecho a este nuevo target, le puedes cambiar de nombre. 
-    a) Como recomendación, pon la posicón y el objeto que estés manipulando para evitar posteriores confusiones.
+- Como recomendación, pon la posicón y el objeto que estés manipulando para evitar posteriores confusiones.
 4. Para el caso de home, le vuelves a dar click derecho y en el menú desplegable, le das click en *Teach current position*
 5.  Para los demás puntos de paso, se deben de crear los nuevos targets (*Add New Target* y renombrarlo). Para moverlos a otra posición, se debe de seleccionar al robot para que se manualmente se muevan en "x", "y" y "z" y en caso de ser necesario, también se configuran las rotaciones en estos 3 ejes. Una vez que la posición este hecha, se vuelve a dar click derecho y se oprime el *Teach Current Position* para poder proseguir.
 6.   Estos mismos pasos se deben de repetir para hacer cada punto de paso de toda la rutina.
@@ -102,7 +102,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
     cubered_home_pose = robomath.transl(450, 250, 0) * robomath.rotx(0) * robomath.roty(0) * robomath.rotz(0)
     cubegreen_home_pose = robomath.transl(450, 340, 0) * robomath.rotx(0) * robomath.roty(0) * robomath.rotz(0)
 
-NOTA: Los calores de tranlación se obtuvieron a partir de dónde se configuraron inicialmente
+**NOTA:** Los colores de tranlación se obtuvieron a partir de dónde se configuraron inicialmente
 
 9. Luego se deben de obtener los puntos de paso y los programas de Attach/Detach
 
@@ -157,10 +157,10 @@ Este proyecto permitó comprender la función y cómo se puede automatizar una r
 
 A pesar de que este proyecto se desarrolló en un ambiente simulado, hay grandes opciones de mejora, las cuales no se pudieron realizar por falta de tiempo, sin embargo, estas son algunas propuestas para mejorar este proyecto:
 1. Si se realiza una simulación:
-    a) Se puede mejorar el proyecto a través de agregar sensores virtuales o lógicos, lo que permite hacer condicionales en base al estado del sensor (por ejemplo: si un cubo está presente o si el cubo se dejó de manera correcta)
-   b) Detectar errores, es decir, que dentro del programa de Python se pongan consicionales en caso de que un cubo no esté en su lugar o que haga un parado de emergencia
+- Se puede mejorar el proyecto a través de agregar sensores virtuales o lógicos, lo que permite hacer condicionales en base al estado del sensor (por ejemplo: si un cubo está presente o si el cubo se dejó de manera correcta)
+- Detectar errores, es decir, que dentro del programa de Python se pongan consicionales en caso de que un cubo no esté en su lugar o que haga un parado de emergencia
 
-2. Pasar del plano simulado a conectarlo con un robot ABB Real
+2. Pasar del plano simulado a conectarlo con un robot ABB Real:
 Debido a que RoboDK permite exportar los programas a robots físicos, esto se puede lograr utilizando un controlador tipo *IRC5*, para ello se deberá verificar la compatibilidad del robot, luego instalar un driver de comunicación (considerar que el ABB usa el lenguaje *RAPID*) o el *RoboDK Driver for ABB* para conectar la computadora al robot por vía Ethernet y luego cargar el código
 
 Estas son sólamente sugerencias, ya que el proyecto demuestra las múltiples aplicaciones que se pueden generar a partir de una simulación.
