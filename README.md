@@ -147,7 +147,7 @@ El programa **RoboDK** se puede descargar en la siguiente liga: https://robodk.c
 ![Robot ABB irb 140](media/Workspace.png)
 https://www.youtube.com/watch?v=yUIlx9siYtE
 
-# 🏗️ Conclusiones y Poaibles Mejoras
+# 🏗️ Conclusiones y Posibles Mejoras
 Este proyecto permitó comprender la función y cómo se puede automatizar una rutina básica de Pick-and-Place con un brazo robótico industrial en uns simulación en RoboDK a tarvés de un programa en Python. Es por ello que como conlcusiones tenemos:
 - Se puede ver la facilidad de la automatización al implementar este programa, ya que permitió la creación y modificación de los procesos simulados.
 - Se comprendió el entorno de RoboDK para poder escalar a proyectos más complejos que involucren sensores o múltiples robots operando juntos.
